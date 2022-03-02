@@ -1,0 +1,87 @@
+footer {
+    background-color: $second-color;
+    padding: 40px 0;
+    .footer {
+        &_logo {
+            width: 150px;
+            display: block;
+        }
+        &_nav {
+            &_main {
+                width: calc(100% - 150px);
+                padding-left: 40px;
+                >li {
+                    // width: 20%;
+                    &.li {
+                        &-small {
+                            // width: 12.5%;
+                        }
+                        &-last {
+                            h4 {
+                                margin-bottom: 8px;
+                            }
+                        }
+                        &-product {
+                            // width: 15%;
+                        }
+                    }
+                    h4 {
+                        font-size: 18px;
+                        font-weight: 500;
+                        letter-spacing: 0.08em;
+                        margin: 0 0 15px;
+                    }
+                }
+            }
+            &_second {
+                >li {
+                    margin-bottom: 5px;
+                    >a {
+                        color: #A6ACB1;
+                        transition: $second-transition;
+                        &:hover {
+                            color: #9BC9A9;
+                        }
+                    }
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+        &_content {
+            padding-bottom: 60px;
+        }
+    }
+    .copyright {
+        text-align: right;
+        color: #A6ACB1;
+        font-weight: 300;
+        padding-top: 20px;
+        border-top: 1px solid rgb(151, 151, 151);
+    }
+}
+
+.gototop {
+    position: fixed;
+    bottom: 40px;
+    right: 35px;
+    cursor: pointer;
+    z-index: 100;
+    img {
+        width: 12px;
+        display: block;
+        margin: 0 auto 10px;
+    }
+    span {
+        font-size: 14px;
+        writing-mode: vertical-lr;
+        // text-orientation: upright;
+        transition: $second-transition;
+    }
+    &:hover {
+        span {
+            color: $third-color;
+        }
+    }
+}
