@@ -35,6 +35,10 @@ input {
     font-family: 'Noto Sans TC', sans-serif;
 }
 
+main {
+    min-height: calc(100vh - 391px);
+}
+
 .contain-box {
     position: relative;
     &_img {
@@ -107,3 +111,9 @@ input {
     overflow: hidden;
 }
 
+
+@media screen and (max-width:1199px) {
+    main {
+        min-height: calc(100vh - 130px);
+    }
+}

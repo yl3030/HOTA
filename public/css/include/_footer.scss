@@ -11,10 +11,10 @@ footer {
                 width: calc(100% - 150px);
                 padding-left: 40px;
                 >li {
-                    // width: 20%;
+                    width: 20%;
                     &.li {
                         &-small {
-                            // width: 12.5%;
+                            width: 12.5%;
                         }
                         &-last {
                             h4 {
@@ -22,7 +22,7 @@ footer {
                             }
                         }
                         &-product {
-                            // width: 15%;
+                            width: 15%;
                         }
                     }
                     h4 {
@@ -82,6 +82,40 @@ footer {
     &:hover {
         span {
             color: $third-color;
+        }
+    }
+}
+
+@media screen and (max-width:1199px) {
+    footer {
+        padding: 20px 0;
+        .footer {
+            &_logo {
+                width: 30%;
+            }
+            &_content {
+                justify-content: center;
+                padding-bottom: 20px;
+            }
+            &_nav {
+                &_main {
+                    display: none;
+                }
+            }
+        }
+        .copyright {
+            text-align: center;
+            font-size: 14px;
+            border: 0;
+            padding-top: 0;
+        }
+    }
+}
+
+@media screen and (max-width:575px) {
+    footer {
+        .copyright {
+            font-size: 12px;
         }
     }
 }

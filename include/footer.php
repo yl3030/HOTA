@@ -2,7 +2,7 @@
     <div class="container">
         <div class="d-flex align-items-start footer_content">
             <img class="footer_logo" src="./public/img/logo.svg" alt="">
-            <ul class="d-flex footer_nav_main justify-content-between">
+            <ul class="d-xl-flex d-none footer_nav_main justify-content-between">
                 <li>
                     <h4>和大集團</h4>
                     <ul class="footer_nav_second">
