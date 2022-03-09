@@ -397,7 +397,7 @@
                     val = 0;
                 }
             }, 25);
-            $window.on('resize', function() {
+            $(window).on('resize', function() {
                 clearInterval(resizeInterval);
                 $rail.css('transform', 'translateX(0)')
                 txtW = parseInt($txt.outerWidth(), 10);

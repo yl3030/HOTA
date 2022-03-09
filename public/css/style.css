@@ -226,7 +226,7 @@ header .container .header_nav_second > ul > li {
 }
 
 header .container .header_nav_second > ul > li h4 {
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-weight: 500;
   position: relative;
   padding-left: 15px;
@@ -644,10 +644,11 @@ footer .footer_nav_main > li.li-product {
 }
 
 footer .footer_nav_main > li h4 {
-  font-size: 18px;
+  font-size: 1rem;
   font-weight: 500;
   letter-spacing: 0.08em;
   margin: 0 0 15px;
+  margin: 0 0 5px;
 }
 
 footer .footer_nav_second > li {
@@ -673,17 +674,26 @@ footer .footer_content {
 }
 
 footer .copyright {
+  padding-right: 40px;
+}
+
+footer .copyright span {
+  padding-top: 20px;
+  display: block;
   text-align: right;
   color: #A6ACB1;
   font-weight: 300;
-  padding-top: 20px;
   border-top: 1px solid #979797;
 }
 
+footer .container {
+  position: relative;
+}
+
 .gototop {
-  position: fixed;
-  bottom: 40px;
-  right: 35px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
   cursor: pointer;
   z-index: 100;
 }
@@ -705,6 +715,29 @@ footer .copyright {
 
 .gototop:hover span {
   color: #4EA16E;
+}
+
+.gear {
+  display: block;
+  position: fixed;
+  width: 100px;
+  bottom: 200px;
+  right: 35px;
+  z-index: 50;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.gear svg {
+  width: 100%;
+}
+
+.gear svg .cls-1 {
+  fill: #fff;
+}
+
+.gear.green svg .cls-1 {
+  fill: #007934;
 }
 
 @media screen and (max-width: 1199px) {
@@ -734,6 +767,11 @@ footer .copyright {
 @media screen and (max-width: 575px) {
   footer .copyright {
     font-size: 12px;
+  }
+  .gear {
+    width: 80px;
+    right: 20px;
+    bottom: 170px;
   }
 }
 

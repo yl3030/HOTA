@@ -45,6 +45,43 @@ $(".icon_search").click(function(){
     $(this).parents("header").toggleClass("active");
 })
 
+// gear
+$(window).on("resize scroll",function(){
+  let about_green_height;
+  let gear_bottom;
+  if($(window).width()<=500){
+    about_green_height = $(".about").height()*0.35;
+  }else if($(window).width()>500 && $(window).width()<=767){
+    about_green_height = $(".about").height()*0.28;
+  }else if($(window).width()>767 && $(window).width()<=991){
+    about_green_height = $(".about").height()*0.55;
+  }else if($(window).width()>991){
+    about_green_height = $(".about").height()*0.4;
+  };
+
+  if($(window).width()<=575){
+    gear_bottom = 170;
+  }else if($(window).width()>575){
+    gear_bottom = 200;
+  }
+
+  let about_top = $(".about").offset().top + about_green_height - $(window).height() + gear_bottom;
+  let product_top = $(".product").offset().top - $(window).height() + gear_bottom;
+  let map_top = $(".map").offset().top - $(window).height() + gear_bottom;
+  let footer_top = $("footer").offset().top - $(window).height() + gear_bottom;
+  if($(window).scrollTop()>0 && $(window).scrollTop()<=about_top) {
+    $(".gear").removeClass("green");
+  }else if ($(window).scrollTop()>about_top && $(window).scrollTop()<=product_top){
+    $(".gear").addClass("green");
+  }else if($(window).scrollTop()>product_top && $(window).scrollTop()<=map_top){
+    $(".gear").removeClass("green");
+  }else if($(window).scrollTop()>map_top && $(window).scrollTop()<=footer_top){
+    $(".gear").addClass("green");
+  }else if($(window).scrollTop()>footer_top){
+    $(".gear").removeClass("green");
+  }
+})
+
 // map pin
 $(".map_pin").mouseover(function(){
   $(this).parents(".map_box").children(".map_mask").css("opacity","1");
@@ -69,7 +106,7 @@ $(window).on("resize scroll",function(){
   $(".product_content").each(function(){
     let product_top = $(this).offset().top - $(window).height() * 1/3;
     let product_bottom = $(this).offset().top + $(window).height()*1/6;
-    console.log("window height=" + $(window).height() + ",this heigth=" + $(this).offset().top + ",top=" + product_top + ",bottom=" + product_bottom + ",now hieght=" + $(window).scrollTop());
+    // console.log("window height=" + $(window).height() + ",this heigth=" + $(this).offset().top + ",top=" + product_top + ",bottom=" + product_bottom + ",now hieght=" + $(window).scrollTop());
     if($(window).scrollTop() > product_top && $(window).scrollTop() < product_bottom){
       $(this).find(".pic_item").each(function(){
         $(this).addClass("active");
