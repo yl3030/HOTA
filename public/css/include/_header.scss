@@ -128,11 +128,11 @@ header {
             }
         }
         .lang {
-            width: 120px;
+            width: 140px;
             a {
                 display: block;
                 transition: $common-transition;
-                &.active {
+                &.active, &:hover {
                     padding: 1px 10px;
                     border-radius: 100px;
                     border: 1px solid #fff;
@@ -207,7 +207,7 @@ header {
             .lang {
                 a {
                     color: #231815;
-                    &.active {
+                    &.active, &:hover {
                         color: #fff;
                         background-color: $main-color;
                         border-color: $main-color;
